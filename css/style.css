@@ -376,6 +376,7 @@ body::before {
    CONTAINER
    ============================================ */
 .container {
+    width: 100%;
     max-width: var(--container-max);
     margin: 0 auto;
     padding: 0 40px;
@@ -500,6 +501,7 @@ body::before {
     display: flex;
     align-items: center;
     overflow: hidden;
+    padding: 8rem 0;
 }
 
 .hero-canvas {
@@ -521,11 +523,9 @@ body::before {
 
 .hero-content {
     position: relative;
-    z-index: 2;
-    max-width: var(--container-max);
-    margin: 0 auto;
-    padding: 0 40px;
-    padding-top: 120px;
+    z-index: 2;    
+    /* padding: 0 40px;
+    padding-top: 120px; */
 }
 
 .hero-eyebrow {
@@ -553,7 +553,7 @@ body::before {
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(44px, 8vw, 120px);
+    font-size: clamp(34px, 6vw, 100px);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.03em;
@@ -614,7 +614,7 @@ body::before {
 
 .hero-ship {
     position: absolute;
-    right: -5%;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
     width: 55%;
@@ -1895,12 +1895,7 @@ body::before {
 @media (max-width: 767px) {
     .container {
         padding: 0 24px;
-    }
-
-    .hero-content {
-        padding: 0 24px;
-        padding-top: 100px;
-    }
+    }    
 
     .universe-grid {
         grid-template-columns: 1fr;
