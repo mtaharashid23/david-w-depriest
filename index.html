@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="First Legion – An epic military science-fiction novel by David W. DePriest. Humanity's first fleet. Humanity's last hope." />
+    <title>First Legion | David W. DePriest</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- CURSOR -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">FIRST <span>LEGION</span></div>
+            <div class="preloader-bar-wrap">
+                <div class="preloader-bar"></div>
+            </div>
+            <div class="preloader-text">INITIALIZING...</div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">FIRST <span>LEGION</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="pages/book.html" class="nav-link">The Book</a></li>
+                <li><a href="pages/universe.html" class="nav-link">Universe</a></li>
+                <li><a href="pages/fleet.html" class="nav-link">Fleet</a></li>
+                <li><a href="pages/characters.html" class="nav-link">Characters</a></li>
+                <li><a href="pages/about.html" class="nav-link">About</a></li>
+                <li><a href="pages/news.html" class="nav-link">News</a></li>
+            </ul>
+            <a href="pages/enlist.html" class="nav-cta">Enlist Now</a>
+            <button class="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="pages/book.html" class="nav-link">The Book</a>
+        <a href="pages/universe.html" class="nav-link">Universe</a>
+        <a href="pages/fleet.html" class="nav-link">Fleet</a>
+        <a href="pages/characters.html" class="nav-link">Characters</a>
+        <a href="pages/about.html" class="nav-link">About</a>
+        <a href="pages/news.html" class="nav-link">News</a>
+        <a href="pages/enlist.html" class="nav-link" style="color: var(--color-blue);">Enlist Now</a>
+    </div>
+    <div class="nav-overlay"></div>
+
+    <!-- ==========================================
+         SECTION 1: HERO
+    =========================================== -->
+    <section class="hero" id="home">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="hero-gradient"></div>
+
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <span class="hero-eyebrow-line"></span>
+                DAVID W. DEPRIEST &mdash; MILITARY SCI-FI
+            </div>
+            <h1 class="hero-title">
+                HUMANITY'S<br/>
+                FIRST FLEET.
+                <span class="hero-title-accent">LAST HOPE.</span>
+            </h1>
+            <div class="hero-divider">
+                <div class="hero-divider-line"></div>
+                <div class="hero-divider-diamond"></div>
+                <div class="hero-divider-line" style="background: linear-gradient(to left, var(--color-blue), transparent);"></div>
+            </div>
+            <p class="hero-subtitle">
+                When an alien civilization arrives on Earth with a warning of a coming war, humanity is forced to make an impossible choice. Trust the strangers. Prepare for battle. Or face extinction.
+            </p>
+            <div class="hero-buttons">
+                <a href="pages/book.html" class="btn btn-primary">
+                    Read First Legion <span class="btn-icon">→</span>
+                </a>
+                <a href="pages/universe.html" class="btn btn-outline">
+                    Explore The Universe <span class="btn-icon">⬡</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Hero Ship (book cover used as ship visual) -->
+        <div class="hero-ship">
+            <img src="images/book-cover.png" alt="First Legion – Book Cover" style="filter: drop-shadow(0 0 60px rgba(0,174,239,0.3)); max-height: 90vh; margin: auto;" />
+        </div>
+
+        <div class="hero-scroll-indicator">
+            <span class="hero-scroll-text">Scroll</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <span class="marquee-item">FIRST LEGION <span>✦</span></span>
+            <span class="marquee-item">HUMANITY'S FIRST FLEET <span>✦</span></span>
+            <span class="marquee-item">ADMIRAL GODFORD <span>✦</span></span>
+            <span class="marquee-item">THE GARGANS <span>✦</span></span>
+            <span class="marquee-item">THE TELLNITES <span>✦</span></span>
+            <span class="marquee-item">FLEET COMMAND <span>✦</span></span>
+            <span class="marquee-item">DAVID W. DEPRIEST <span>✦</span></span>
+            <span class="marquee-item">MILITARY SCI-FI <span>✦</span></span>
+            <!-- Duplicate for loop -->
+            <span class="marquee-item">FIRST LEGION <span>✦</span></span>
+            <span class="marquee-item">HUMANITY'S FIRST FLEET <span>✦</span></span>
+            <span class="marquee-item">ADMIRAL GODFORD <span>✦</span></span>
+            <span class="marquee-item">THE GARGANS <span>✦</span></span>
+            <span class="marquee-item">THE TELLNITES <span>✦</span></span>
+            <span class="marquee-item">FLEET COMMAND <span>✦</span></span>
+            <span class="marquee-item">DAVID W. DEPRIEST <span>✦</span></span>
+            <span class="marquee-item">MILITARY SCI-FI <span>✦</span></span>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         SECTION 2: FEATURED BOOK
+    =========================================== -->
+    <section class="section book-section" id="book">
+        <div class="container">
+            <div class="book-grid">
+                <div class="book-cover-wrap reveal-left">
+                    <div class="book-cover-frame">
+                        <img src="images/book-cover.png" alt="First Legion Book Cover" class="book-cover-img" />
+                        <div class="book-badge">BOOK<br/>ONE</div>
+                    </div>
+                </div>
+
+                <div class="book-content reveal-right">
+                    <div class="section-eyebrow">Featured Title</div>
+                    <h2 class="book-title">FIRST<br/>LEGION</h2>
+                    <div class="book-author">By David W. DePriest</div>
+                    <p class="book-desc">
+                        When the Gargans arrive on Earth with news of an unstoppable enemy known as the Tellnites, humanity unites as never before. Massive fleets are built. Millions volunteer. Entire industries are transformed in preparation for a war that could determine the future of countless worlds.
+                    </p>
+
+                    <div class="book-features">
+                        <div class="book-feature">
+                            <div class="book-feature-icon">⚔</div>
+                            <div class="book-feature-text">
+                                <h4>Massive Fleet Battles</h4>
+                                <p>Large-scale military engagements involving thousands of ships and millions of personnel.</p>
+                            </div>
+                        </div>
+                        <div class="book-feature">
+                            <div class="book-feature-icon">🌌</div>
+                            <div class="book-feature-text">
+                                <h4>Rich Worldbuilding</h4>
+                                <p>Alien civilizations, advanced technologies, and a fully realized interstellar universe.</p>
+                            </div>
+                        </div>
+                        <div class="book-feature">
+                            <div class="book-feature-icon">👥</div>
+                            <div class="book-feature-text">
+                                <h4>Unforgettable Characters</h4>
+                                <p>Ordinary people rising to become heroes, commanders, and legends.</p>
+                            </div>
+                        </div>
+                        <div class="book-feature">
+                            <div class="book-feature-icon">📖</div>
+                            <div class="book-feature-text">
+                                <h4>Epic Storytelling</h4>
+                                <p>War, sacrifice, loyalty, and survival on a galactic scale.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-buttons">
+                        <a href="pages/book.html" class="btn btn-primary">Buy Now <span class="btn-icon">→</span></a>
+                        <a href="pages/book.html#sample" class="btn btn-outline">Read Sample</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: ABOUT THE UNIVERSE
+    =========================================== -->
+    <section class="section universe-section" id="universe">
+        <div class="universe-bg"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="reveal">
+                <div class="section-eyebrow">Lore &amp; Worldbuilding</div>
+                <h2 class="section-title">THE FIRST LEGION<br/><span>UNIVERSE</span></h2>
+                <p class="section-subtitle">From humanity's first contact with the Gargans to the devastating wars against the Tellnites, every decision shapes the future of the galaxy.</p>
+            </div>
+
+            <div class="universe-grid">
+                <div class="universe-card reveal delay-1">
+                    <div class="universe-card-num">01</div>
+                    <h3 class="universe-card-title">Multiple Worlds</h3>
+                    <p class="universe-card-text">The First Legion Universe spans multiple worlds, civilizations, and generations of conflict. A universe where humanity has only begun to explore the stars.</p>
+                </div>
+                <div class="universe-card reveal delay-2">
+                    <div class="universe-card-num">02</div>
+                    <h3 class="universe-card-title">Ancient Rivalries</h3>
+                    <p class="universe-card-text">Ancient rivalries shape the future of entire galaxies. Where alliances are tested, empires rise and fall, and ordinary individuals become legends.</p>
+                </div>
+                <div class="universe-card reveal delay-3">
+                    <div class="universe-card-num">03</div>
+                    <h3 class="universe-card-title">Courage &amp; Sacrifice</h3>
+                    <p class="universe-card-text">A universe where courage, leadership, and sacrifice determine the fate of civilizations. The mission is only beginning.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;" class="reveal">
+                <a href="pages/universe.html" class="btn btn-outline">Enter The Universe <span class="btn-icon">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: MEET THE HERO
+    =========================================== -->
+    <section class="section character-section" id="characters">
+        <div class="container">
+            <div class="character-grid">
+                <div class="character-visual reveal-left">
+                    <div>
+                        <div class="character-emblem">
+                            <div class="character-emblem-inner">SG</div>
+                        </div>
+                        <div class="character-stats" style="margin-top: 40px;">
+                            <div class="stat-card">
+                                <span class="stat-value">ADM</span>
+                                <span class="stat-label">Rank</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-value">FL.01</span>
+                                <span class="stat-label">Command</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-value">1M+</span>
+                                <span class="stat-label">Personnel</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-value">23</span>
+                                <span class="stat-label">Warships</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-right">
+                    <div class="section-eyebrow">Character Profile</div>
+                    <h2 class="section-title">ADMIRAL<br/><span>STEPHEN GODFORD</span></h2>
+                    <p class="section-subtitle">
+                        Once a civilian engineer, Stephen Godford becomes the leader of humanity's first interstellar military force. His strategic brilliance, courage, and commitment to protecting others transform him into one of the most influential figures in human history.
+                    </p>
+                    <p style="font-size: 15px; color: var(--color-white-dimmer); line-height: 1.8; margin-top: 20px; margin-bottom: 40px;">
+                        As commander of First Legion, Godford must navigate war, politics, alliances, and personal sacrifice while carrying the hopes of entire worlds.
+                    </p>
+                    <a href="pages/characters.html" class="btn btn-primary">View All Characters <span class="btn-icon">→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: THE THREAT
+    =========================================== -->
+    <section class="section threat-section" id="threats">
+        <div class="container">
+            <div class="reveal" style="text-align: center; margin-bottom: 0;">
+                <div class="section-eyebrow" style="justify-content: center;">Know Your Enemy</div>
+                <h2 class="section-title" style="text-align: center;">THE<br/><span>THREAT</span></h2>
+            </div>
+            <div class="threat-split">
+                <div class="threat-panel">
+                    <div class="threat-tag">Faction Alpha</div>
+                    <h3 class="threat-name">GARGANS</h3>
+                    <p class="threat-desc">The mysterious alien civilization that first contacted Earth. Their warning changed humanity forever. But not everything they revealed was the truth.</p>
+                    <div class="threat-icon">👽</div>
+                </div>
+                <div class="threat-panel">
+                    <div class="threat-tag" style="color: #ef4444; border-color: rgba(239,68,68,0.3);">Faction Beta</div>
+                    <h3 class="threat-name" style="color: #ef9999;">TELLNITES</h3>
+                    <p class="threat-desc">A powerful force feared throughout the galaxy. Masters of conquest and domination. The greatest military threat humanity has ever faced.</p>
+                    <div class="threat-icon">💀</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: FLEET COMMAND
+    =========================================== -->
+    <section class="section fleet-section" id="fleet">
+        <div class="container">
+            <div class="fleet-header reveal">
+                <div class="section-eyebrow" style="justify-content: center;">Fleet Manifest</div>
+                <h2 class="section-title">THE <span>FLEET</span></h2>
+            </div>
+
+            <div class="fleet-stats-bar reveal">
+                <div class="fleet-stat">
+                    <span class="fleet-stat-num" data-count="23" data-suffix="">23</span>
+                    <span class="fleet-stat-label">Warships</span>
+                </div>
+                <div class="fleet-stat">
+                    <span class="fleet-stat-num" data-count="1000000" data-suffix="+">~1M</span>
+                    <span class="fleet-stat-label">Personnel</span>
+                </div>
+                <div class="fleet-stat">
+                    <span class="fleet-stat-num" data-count="1" data-suffix="">1</span>
+                    <span class="fleet-stat-label">Mission</span>
+                </div>
+            </div>
+
+            <div class="fleet-grid">
+                <!-- Flagship -->
+                <div class="ship-card flagship-card">
+                    <div class="flagship-icon-wrap">
+                        <div class="flagship-icon">🚀</div>
+                    </div>
+                    <div>
+                        <div class="ship-designation">HSS-001 · FLAGSHIP</div>
+                        <h3 class="ship-name">OLYMPIA</h3>
+                        <div class="ship-class">Command Carrier — First Legion</div>
+                        <p class="ship-desc">The Olympia serves as the command center for fleet operations and the home of Admiral Stephen Godford. A symbol of humanity's determination, the Olympia leads the fleet into every major engagement.</p>
+                        <div class="ship-divider"></div>
+                        <span class="ship-role-badge">Fleet Command &amp; Vanguard Operations</span>
+                    </div>
+                </div>
+
+                <!-- TIGRESS -->
+                <div class="ship-card">
+                    <div class="ship-designation">HSS-002 · WARSHIP</div>
+                    <h3 class="ship-name">TIGRESS</h3>
+                    <div class="ship-class">Heavy Cruiser</div>
+                    <p class="ship-desc">A versatile warship designed for both fleet combat and independent operations. Known for its durability, firepower, and tactical flexibility.</p>
+                    <div class="ship-divider"></div>
+                    <span class="ship-role-badge">Fleet Combat &amp; Escort</span>
+                </div>
+
+                <!-- FANG -->
+                <div class="ship-card">
+                    <div class="ship-designation">HSS-003 · WARSHIP</div>
+                    <h3 class="ship-name">FANG</h3>
+                    <div class="ship-class">Heavy Cruiser</div>
+                    <p class="ship-desc">Built for front-line combat, the Fang serves as one of First Legion's most formidable warships, spearheading assaults and breaking enemy formations.</p>
+                    <div class="ship-divider"></div>
+                    <span class="ship-role-badge">Front-Line Combat</span>
+                </div>
+
+                <!-- VALHALLA -->
+                <div class="ship-card">
+                    <div class="ship-designation">HSS-004 · CARRIER</div>
+                    <h3 class="ship-name">VALHALLA</h3>
+                    <div class="ship-class">Strike Carrier</div>
+                    <p class="ship-desc">The Valhalla carries thousands of fighters and support craft into battle. Its presence often determines the outcome of major engagements.</p>
+                    <div class="ship-divider"></div>
+                    <span class="ship-role-badge">Air Wing Deployment</span>
+                </div>
+
+                <!-- MIDAS -->
+                <div class="ship-card">
+                    <div class="ship-designation">HSS-005 · CARRIER</div>
+                    <h3 class="ship-name">MIDAS</h3>
+                    <div class="ship-class">Fleet Carrier</div>
+                    <p class="ship-desc">Designed to project power across vast distances, the Midas serves as a critical component of First Legion's operational strategy.</p>
+                    <div class="ship-divider"></div>
+                    <span class="ship-role-badge">Power Projection</span>
+                </div>
+
+                <!-- TITAN -->
+                <div class="ship-card">
+                    <div class="ship-designation">HSS-006 · TRANSPORT</div>
+                    <h3 class="ship-name">TITAN</h3>
+                    <div class="ship-class">Personnel Carrier</div>
+                    <p class="ship-desc">The Titan transports the soldiers, specialists, and support personnel who form the backbone of the Legion across interstellar distances.</p>
+                    <div class="ship-divider"></div>
+                    <span class="ship-role-badge">Troop Deployment</span>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;" class="reveal">
+                <a href="pages/fleet.html" class="btn btn-outline">View Full Fleet Manifest <span class="btn-icon">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: THE SERIES
+    =========================================== -->
+    <section class="section series-section" id="series">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <div class="section-eyebrow" style="justify-content: center;">The Saga</div>
+                <h2 class="section-title">BOOK <span>SERIES</span></h2>
+                <p class="section-subtitle" style="margin: 20px auto 0; text-align: center;">The First Legion Universe continues to expand across multiple volumes.</p>
+            </div>
+
+            <div class="series-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"><span class="timeline-dot-num">01</span></div>
+                    <div class="timeline-content">
+                        <div class="timeline-book-tag">Book One · Available Now</div>
+                        <h3 class="timeline-book-title">FIRST LEGION</h3>
+                        <p class="timeline-book-desc">Humanity's first steps into interstellar warfare. When the Gargans arrive, nothing will ever be the same.</p>
+                    </div>
+                </div>
+                <div class="timeline-item upcoming">
+                    <div class="timeline-dot"><span class="timeline-dot-num">02</span></div>
+                    <div class="timeline-content">
+                        <div class="timeline-book-tag">Book Two · Coming Soon</div>
+                        <h3 class="timeline-book-title">WARLORD</h3>
+                        <p class="timeline-book-desc">The conflict expands across the galaxy. New alliances are forged, old ones tested, and the scale of the war grows beyond what anyone imagined.</p>
+                    </div>
+                </div>
+                <div class="timeline-item upcoming">
+                    <div class="timeline-dot"><span class="timeline-dot-num">03+</span></div>
+                    <div class="timeline-content">
+                        <div class="timeline-book-tag">Future Installments</div>
+                        <h3 class="timeline-book-title">THE UNIVERSE CONTINUES</h3>
+                        <p class="timeline-book-desc">The mission is only beginning. Enlist today to receive exclusive updates on upcoming releases.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 8: ABOUT THE AUTHOR
+    =========================================== -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="reveal-left">
+                    <div class="about-image-wrap">
+                        <div class="about-image-frame">
+                            <div class="about-image-initials">DWD</div>
+                            <div class="about-image-scanlines"></div>
+                        </div>
+                        <div class="about-corner about-corner-tl"></div>
+                        <div class="about-corner about-corner-br"></div>
+                    </div>
+                </div>
+
+                <div class="reveal-right">
+                    <div class="section-eyebrow">The Creator</div>
+                    <h2 class="section-title">MEET<br/><span>DAVID W.<br/>DEPRIEST</span></h2>
+                    <p class="section-subtitle">
+                        David W. DePriest is the creator of the First Legion Universe, an expansive military science-fiction franchise exploring humanity's struggle to survive and thrive among the stars.
+                    </p>
+                    <p style="font-size: 15px; color: var(--color-white-dimmer); line-height: 1.8; margin-top: 20px; margin-bottom: 40px;">
+                        His stories combine epic space warfare, compelling characters, advanced technologies, and richly detailed worldbuilding to create immersive adventures that capture the imagination of science-fiction readers around the world. Through First Legion and future installments, David continues to expand a universe filled with courage, exploration, sacrifice, and the enduring strength of the human spirit.
+                    </p>
+                    <a href="pages/about.html" class="btn btn-primary">Full Biography <span class="btn-icon">→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 9: ENLIST / NEWSLETTER
+    =========================================== -->
+    <section class="section enlist-section" id="enlist">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-eyebrow" style="justify-content: center;">Join The Fleet</div>
+                <h2 class="section-title" style="text-align: center;">ENLIST <span>TODAY</span></h2>
+                <p class="section-subtitle" style="margin: 20px auto 0; text-align: center;">Become part of the First Legion community.</p>
+            </div>
+
+            <div class="enlist-benefits reveal delay-2">
+                <div class="enlist-benefit"><span class="enlist-benefit-check">✓</span> Exclusive Updates</div>
+                <div class="enlist-benefit"><span class="enlist-benefit-check">✓</span> New Release Announcements</div>
+                <div class="enlist-benefit"><span class="enlist-benefit-check">✓</span> Sample Chapters</div>
+                <div class="enlist-benefit"><span class="enlist-benefit-check">✓</span> Fleet Dossiers</div>
+                <div class="enlist-benefit"><span class="enlist-benefit-check">✓</span> Behind-The-Scenes Content</div>
+            </div>
+
+            <form class="enlist-form reveal delay-3">
+                <input type="text" class="form-field" placeholder="Your Name" required />
+                <input type="email" class="form-field" placeholder="Your Email Address" required />
+                <button type="submit" class="btn btn-primary">ENLIST NOW <span class="btn-icon">→</span></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand-title">FIRST <span>LEGION</span></div>
+                    <p class="footer-brand-text">An epic military science-fiction universe by David W. DePriest. Humanity's first fleet. Humanity's last hope.</p>
+                </div>
+                <div>
+                    <div class="footer-heading">Navigate</div>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="pages/book.html" class="footer-link">The Book</a></li>
+                        <li><a href="pages/universe.html" class="footer-link">Universe</a></li>
+                        <li><a href="pages/fleet.html" class="footer-link">Fleet</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-heading">Explore</div>
+                    <ul class="footer-links">
+                        <li><a href="pages/characters.html" class="footer-link">Characters</a></li>
+                        <li><a href="pages/about.html" class="footer-link">About David</a></li>
+                        <li><a href="pages/news.html" class="footer-link">News</a></li>
+                        <li><a href="pages/enlist.html" class="footer-link">Enlist</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-heading">Connect</div>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Newsletter</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2025 <span>David W. DePriest</span>. All Rights Reserved. First Legion &amp; the First Legion Universe are trademarks of David W. DePriest.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+    <script>
+        // Register GSAP plugins
+        gsap.registerPlugin(ScrollTrigger);
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

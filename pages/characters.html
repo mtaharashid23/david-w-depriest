@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Characters of First Legion – The people who shaped history." />
+    <title>Characters | First Legion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+        .char-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 70px; }
+        .char-card { background: rgba(10,16,36,0.8); border: var(--border-glow); padding: 44px 36px; position: relative; overflow: hidden; transition: all var(--transition-med); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px)); }
+        .char-card::after { content:''; position:absolute; bottom:0; left:0; width:0%; height:2px; background:linear-gradient(to right, var(--color-blue), transparent); transition: width var(--transition-slow); }
+        .char-card:hover { border-color: rgba(0,174,239,0.5); background: rgba(0,174,239,0.04); transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(0,174,239,0.1); }
+        .char-card:hover::after { width: 100%; }
+        .char-avatar { width: 80px; height: 80px; border: var(--border-glow-strong); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; background: rgba(0,174,239,0.06); }
+        .char-initials { font-family: var(--font-heading); font-size: 24px; font-weight: 900; color: var(--color-blue); }
+        .char-rank { font-family: var(--font-subheading); font-size: 10px; font-weight: 700; letter-spacing: 0.5em; text-transform: uppercase; color: var(--color-blue); margin-bottom: 10px; }
+        .char-name { font-family: var(--font-heading); font-size: 22px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-white); margin-bottom: 8px; }
+        .char-role { font-family: var(--font-subheading); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-steel); margin-bottom: 20px; }
+        .char-desc { font-size: 14px; color: var(--color-white-dimmer); line-height: 1.75; }
+        .char-card-featured { grid-column: 1 / -1; display: grid; grid-template-columns: auto 1fr; gap: 50px; align-items: center; border-color: rgba(0,174,239,0.4); background: rgba(0,40,80,0.15); }
+        .char-avatar-lg { width: 140px; height: 140px; border: var(--border-glow-strong); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle, rgba(0,174,239,0.12), rgba(0,174,239,0.03)); box-shadow: 0 0 40px rgba(0,174,239,0.2); flex-shrink: 0; }
+        .char-initials-lg { font-family: var(--font-heading); font-size: 46px; font-weight: 900; color: var(--color-blue); text-shadow: 0 0 30px rgba(0,174,239,0.5); }
+        @media (max-width: 991px) { .char-grid { grid-template-columns: 1fr 1fr; } .char-card-featured { grid-column: auto; grid-template-columns: 1fr; gap: 30px; } }
+        @media (max-width: 600px) { .char-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="cursor-dot"></div><div class="cursor-ring"></div>
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">FIRST <span>LEGION</span></a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li><li><a href="book.html" class="nav-link">The Book</a></li><li><a href="universe.html" class="nav-link">Universe</a></li><li><a href="fleet.html" class="nav-link">Fleet</a></li><li><a href="characters.html" class="nav-link">Characters</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="news.html" class="nav-link">News</a></li>
+            </ul>
+            <a href="enlist.html" class="nav-cta">Enlist Now</a>
+            <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-nav"><a href="../index.html" class="nav-link">Home</a><a href="book.html" class="nav-link">The Book</a><a href="universe.html" class="nav-link">Universe</a><a href="fleet.html" class="nav-link">Fleet</a><a href="characters.html" class="nav-link">Characters</a><a href="about.html" class="nav-link">About</a><a href="news.html" class="nav-link">News</a><a href="enlist.html" class="nav-link" style="color:var(--color-blue)">Enlist Now</a></div>
+    <div class="nav-overlay"></div>
+
+    <div class="page-hero">
+        <div class="container">
+            <div class="page-breadcrumb"><a href="../index.html">Home</a> / Characters</div>
+            <h1 class="page-hero-title">THE PEOPLE WHO<br/><span>SHAPED HISTORY</span></h1>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="reveal" style="max-width:700px;">
+                <div class="section-eyebrow">Personnel Dossiers</div>
+                <h2 class="section-title">CHARACTER <span>PROFILES</span></h2>
+                <p class="section-subtitle">Every great conflict is defined by the individuals who choose to stand against impossible odds.</p>
+            </div>
+
+            <div class="char-grid">
+                <!-- GODFORD FEATURED -->
+                <div class="char-card char-card-featured reveal">
+                    <div class="char-avatar-lg">
+                        <span class="char-initials-lg">SG</span>
+                    </div>
+                    <div>
+                        <div class="char-rank">Admiral · First Legion Command</div>
+                        <div class="char-name">STEPHEN GODFORD</div>
+                        <div class="char-role">Commander, First Legion — Humanity's Greatest Military Leader</div>
+                        <p class="char-desc">Once a civilian engineer, Stephen Godford becomes the leader of humanity's first interstellar military force. His strategic brilliance, courage, and commitment to protecting others transform him into one of the most influential figures in human history.</p>
+                        <p class="char-desc" style="margin-top:14px;">As commander of First Legion, Godford must navigate war, politics, alliances, and personal sacrifice while carrying the hopes of entire worlds. What began as an unlikely path from computer engineering to command led to decisions that would determine the survival of civilizations.</p>
+                        <div style="margin-top:24px; display:flex; gap:16px; flex-wrap:wrap;">
+                            <div class="stat-card" style="padding:14px 20px;"><span class="stat-value" style="font-size:20px;">ADM</span><span class="stat-label">Rank</span></div>
+                            <div class="stat-card" style="padding:14px 20px;"><span class="stat-value" style="font-size:20px;">Olympia</span><span class="stat-label">Flagship</span></div>
+                            <div class="stat-card" style="padding:14px 20px;"><span class="stat-value" style="font-size:20px;">~1M</span><span class="stat-label">Under Command</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JOHANSSON -->
+                <div class="char-card reveal delay-1">
+                    <div class="char-avatar"><span class="char-initials">JJ</span></div>
+                    <div class="char-rank">Captain · First Legion</div>
+                    <div class="char-name">JEFFERY JOHANSSON</div>
+                    <div class="char-role">Trusted Advisor & Senior Officer</div>
+                    <p class="char-desc">A trusted advisor and loyal officer, Johansson serves as one of Godford's closest allies. His professionalism, leadership, and unwavering support help guide First Legion through some of its greatest challenges. When command falters, Johansson steadies the line.</p>
+                </div>
+
+                <!-- MERRICK -->
+                <div class="char-card reveal delay-2">
+                    <div class="char-avatar"><span class="char-initials">MRK</span></div>
+                    <div class="char-rank">Officer · First Legion</div>
+                    <div class="char-name">MERRICK</div>
+                    <div class="char-role">First Legion Officer</div>
+                    <p class="char-desc">A key figure in the First Legion command structure, Merrick's role in the unfolding conflict proves critical to the fleet's survival. His background and loyalties are among the more complex threads woven through the First Legion saga.</p>
+                </div>
+
+                <!-- THE CREW -->
+                <div class="char-card reveal delay-3">
+                    <div class="char-avatar"><span class="char-initials" style="font-size:16px;">FL1</span></div>
+                    <div class="char-rank">Personnel · First Legion</div>
+                    <div class="char-name">THE MEN &amp; WOMEN OF FIRST LEGION</div>
+                    <div class="char-role">Pilots · Engineers · Soldiers · Scientists · Leaders</div>
+                    <p class="char-desc">Drawn from every corner of Earth, the personnel of First Legion represent the very best humanity has to offer. Together they form the first line of defense against the growing threats beyond Earth — ordinary people rising to meet extraordinary challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENLIST CTA -->
+    <section class="section enlist-section">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-eyebrow" style="justify-content:center;">Join The Story</div>
+                <h2 class="section-title" style="text-align:center;">DISCOVER THEIR <span>STORIES</span></h2>
+                <p class="section-subtitle" style="margin:20px auto 0; text-align:center; max-width:600px;">Read First Legion and follow these characters through humanity's greatest adventure among the stars.</p>
+            </div>
+            <div style="text-align:center; margin-top:50px;" class="reveal delay-2">
+                <a href="book.html" class="btn btn-primary">Get The Book <span class="btn-icon">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div><div class="footer-brand-title">FIRST <span>LEGION</span></div><p class="footer-brand-text">An epic military science-fiction universe by David W. DePriest.</p></div>
+                <div><div class="footer-heading">Navigate</div><ul class="footer-links"><li><a href="../index.html" class="footer-link">Home</a></li><li><a href="book.html" class="footer-link">The Book</a></li><li><a href="universe.html" class="footer-link">Universe</a></li><li><a href="fleet.html" class="footer-link">Fleet</a></li></ul></div>
+                <div><div class="footer-heading">Explore</div><ul class="footer-links"><li><a href="characters.html" class="footer-link">Characters</a></li><li><a href="about.html" class="footer-link">About</a></li><li><a href="news.html" class="footer-link">News</a></li><li><a href="enlist.html" class="footer-link">Enlist</a></li></ul></div>
+                <div><div class="footer-heading">Connect</div><ul class="footer-links"><li><a href="#" class="footer-link">Newsletter</a></li><li><a href="#" class="footer-link">Contact</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p class="footer-copy">&copy; 2025 <span>David W. DePriest</span>. All Rights Reserved.</p></div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+    <script>gsap.registerPlugin(ScrollTrigger);</script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
