@@ -358,8 +358,31 @@ function initPageHeroReveal() {
     if (!pageTitle) return;
 
     const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 0.9 } });
-    if (breadcrumb) tl.from(breadcrumb, { opacity: 0, y: 20 }, 0.3);
-    tl.from(pageTitle, { opacity: 0, y: 40, clipPath: 'inset(0 100% 0 0)' }, 0.5);
+
+    // Breadcrumb animation
+    if (breadcrumb) {
+        tl.fromTo(breadcrumb, 
+            { opacity: 0, y: 20 }, 
+            { opacity: 1, y: 0 }, 
+            0.3
+        );
+    }
+
+    // Title animation (clipPath ko explicitly reveal karein)
+    tl.fromTo(pageTitle, 
+        { 
+            opacity: 0, 
+            y: 40, 
+            clipPath: 'inset(0 100% 0 0)' // Poora chhupa hua (Right se)
+        }, 
+        { 
+            opacity: 1, 
+            y: 0, 
+            clipPath: 'inset(0 0% 0 0)', // Poora dikhayi de raha hai
+            duration: 1.2 // Thoda slow takki effect dikhe
+        }, 
+        0.5
+    );
 }
 
 // ============================================

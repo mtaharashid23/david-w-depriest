@@ -2,30 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Latest transmissions from the First Legion Universe." />
-    <title>News | First Legion</title>
+    <title>News | First Legion Universe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css" />
     <style>
-        .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 70px; }
-        .news-card { background: rgba(10,16,36,0.8); border: var(--border-glow); overflow: hidden; transition: all var(--transition-med); clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
-        .news-card:hover { border-color: rgba(0,174,239,0.5); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(0,174,239,0.08); }
-        .news-card-img { aspect-ratio: 16/9; background: linear-gradient(135deg, rgba(0,40,80,0.6), rgba(0,174,239,0.1)); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-        .news-card-img-text { font-family: var(--font-heading); font-size: 36px; font-weight: 900; color: rgba(0,174,239,0.15); letter-spacing: 0.1em; }
-        .news-card-img::after { content:''; position:absolute; inset:0; background: linear-gradient(to bottom, transparent 60%, rgba(10,16,36,0.8)); }
-        .news-card-body { padding: 28px 30px 34px; }
-        .news-tag { font-family: var(--font-subheading); font-size: 10px; font-weight: 700; letter-spacing: 0.4em; text-transform: uppercase; color: var(--color-blue); margin-bottom: 12px; display:block; }
-        .news-title { font-family: var(--font-heading); font-size: 17px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-white); margin-bottom: 12px; line-height: 1.3; }
-        .news-excerpt { font-size: 14px; color: var(--color-white-dimmer); line-height: 1.7; margin-bottom: 20px; }
-        .news-meta { font-family: var(--font-subheading); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-steel); }
-        .news-card-featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
-        .news-card-featured .news-card-img { aspect-ratio: auto; min-height: 300px; }
-        .news-card-featured .news-card-body { padding: 50px; display: flex; flex-direction: column; justify-content: center; }
-        .news-card-featured .news-title { font-size: 26px; margin-bottom: 16px; }
-        .news-card-featured .news-excerpt { font-size: 16px; }
-        @media (max-width: 991px) { .news-grid { grid-template-columns: 1fr 1fr; } .news-card-featured { grid-column: auto; grid-template-columns: 1fr; } .news-card-featured .news-card-img { min-height: 200px; } }
-        @media (max-width: 600px) { .news-grid { grid-template-columns: 1fr; } }
+        .news-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:28px; margin-top:60px; }
+        @media(max-width:991px){.news-grid{grid-template-columns:1fr 1fr;}}
+        @media(max-width:600px){.news-grid{grid-template-columns:1fr;}}
+        .news-card { background:rgba(10,16,34,0.7); border:var(--border-glow); clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%); overflow:hidden; transition:all var(--transition-med); }
+        .news-card:hover { border-color:rgba(200,155,60,0.4); transform:translateY(-5px); box-shadow:0 20px 60px rgba(0,0,0,0.5); }
+        .news-card-header { padding:24px 28px 0; }
+        .news-card-cat { font-family:var(--font-subheading); font-size:10px; font-weight:700; letter-spacing:0.4em; text-transform:uppercase; color:var(--color-gold); margin-bottom:6px; }
+        .news-card-date { font-family:var(--font-subheading); font-size:11px; letter-spacing:0.15em; color:var(--color-steel); margin-bottom:14px; }
+        .news-card-title { font-family:var(--font-heading); font-size:17px; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; color:var(--color-white); margin-bottom:12px; line-height:1.25; }
+        .news-card-excerpt { font-size:13px; color:var(--color-white-dimmer); line-height:1.7; font-family:var(--font-body); padding:0 28px 24px; }
+        .news-card-footer { padding:14px 28px; border-top:var(--border-glow); display:flex; align-items:center; justify-content:space-between; }
+        .news-card-tag { font-family:var(--font-subheading); font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--color-steel); }
+        .news-read-link { font-family:var(--font-subheading); font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--color-gold); transition:color 0.2s; }
+        .news-read-link:hover { color:var(--color-white); }
+        .news-featured { grid-column:1 / -1; display:grid; grid-template-columns:1fr 1fr; gap:0; }
+        @media(max-width:767px){.news-featured{grid-template-columns:1fr;}}
+        .news-featured-img { background:linear-gradient(135deg,rgba(10,16,34,0.9),rgba(200,155,60,0.12)); display:flex; align-items:center; justify-content:center; min-height:260px; font-size:80px; opacity:0.4; }
+        .news-featured-body { padding:40px 36px; }
+        .news-featured-cat { font-family:var(--font-subheading); font-size:11px; font-weight:700; letter-spacing:0.5em; text-transform:uppercase; color:var(--color-gold); margin-bottom:8px; }
+        .news-featured-title { font-family:var(--font-heading); font-size:clamp(20px,2.5vw,34px); font-weight:900; text-transform:uppercase; letter-spacing:0.06em; color:var(--color-white); margin-bottom:16px; line-height:1.1; }
+        .news-featured-excerpt { font-size:15px; color:var(--color-white-dim); line-height:1.8; font-family:var(--font-body); margin-bottom:24px; }
     </style>
 </head>
 <body>
@@ -34,87 +36,95 @@
         <div class="nav-container">
             <a href="../index.html" class="nav-logo">FIRST <span>LEGION</span></a>
             <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li><li><a href="book.html" class="nav-link">The Book</a></li><li><a href="universe.html" class="nav-link">Universe</a></li><li><a href="fleet.html" class="nav-link">Fleet</a></li><li><a href="characters.html" class="nav-link">Characters</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown"><a href="book.html" class="nav-link">Books <span class="nav-arrow">▾</span></a><ul class="dropdown-menu"><li><a href="book-warlord.html" class="dropdown-link">First Legion: Warlord</a></li><li><a href="book-paladin.html" class="dropdown-link">Paladin</a></li></ul></li>
+                <li><a href="universe.html" class="nav-link">Universe</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="characters.html" class="nav-link">Characters</a></li>
+                <li><a href="fleet.html" class="nav-link">Fleet Database</a></li>
+                <li><a href="news.html" class="nav-link" style="color:var(--color-gold)">News</a></li>
+                <li><a href="media.html" class="nav-link">Media</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-            <a href="enlist.html" class="nav-cta">Enlist Now</a>
-            <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+            <a href="enlist.html" class="nav-cta">Join The Legion</a>
+            <button class="hamburger"><span></span><span></span><span></span></button>
         </div>
     </nav>
-    <div class="mobile-nav"><a href="../index.html" class="nav-link">Home</a><a href="book.html" class="nav-link">The Book</a><a href="universe.html" class="nav-link">Universe</a><a href="fleet.html" class="nav-link">Fleet</a><a href="characters.html" class="nav-link">Characters</a><a href="about.html" class="nav-link">About</a><a href="news.html" class="nav-link">News</a><a href="enlist.html" class="nav-link" style="color:var(--color-blue)">Enlist Now</a></div>
+    <div class="mobile-nav">
+        <a href="../index.html" class="nav-link">Home</a><a href="book.html" class="nav-link">Books</a><a href="universe.html" class="nav-link">Universe</a><a href="timeline.html" class="nav-link">Timeline</a><a href="characters.html" class="nav-link">Characters</a><a href="fleet.html" class="nav-link">Fleet Database</a><a href="news.html" class="nav-link">News</a><a href="media.html" class="nav-link">Media</a><a href="shop.html" class="nav-link">Shop</a><a href="contact.html" class="nav-link">Contact</a><a href="enlist.html" class="nav-link" style="color:var(--color-gold)">Join The Legion</a>
+    </div>
     <div class="nav-overlay"></div>
 
-    <div class="page-hero">
-        <div class="container">
-            <div class="page-breadcrumb"><a href="../index.html">Home</a> / News</div>
-            <h1 class="page-hero-title">LATEST <span>TRANSMISSIONS</span></h1>
+    <section class="page-hero">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="hero-gradient"></div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="page-breadcrumb"><a href="../index.html">Home</a> <span>›</span> News</div>
+            <h1 class="page-hero-title">LEGION <span>NEWS</span></h1>
         </div>
-    </div>
+    </section>
 
-    <section class="section">
+    <section class="section" style="background:var(--color-space-black);">
         <div class="container">
-            <div class="reveal" style="margin-bottom:0;">
-                <div class="section-eyebrow">Updates &amp; Announcements</div>
-                <p class="section-subtitle">Stay informed about the latest developments from the First Legion Universe. The mission is only beginning.</p>
-            </div>
-
             <div class="news-grid">
-                <!-- FEATURED -->
-                <div class="news-card news-card-featured reveal">
-                    <div class="news-card-img"><div class="news-card-img-text">FL</div></div>
-                    <div class="news-card-body">
-                        <span class="news-tag">✦ Latest Release</span>
-                        <div class="news-title">FIRST LEGION IS NOW AVAILABLE</div>
-                        <p class="news-excerpt">The epic military science-fiction saga that launches the First Legion Universe is now available. Join Admiral Stephen Godford and the crew of First Legion as they venture into the stars for the first time. Pick up your copy today and discover humanity's first — and greatest — interstellar adventure.</p>
-                        <div class="news-meta">2026 &nbsp;·&nbsp; David W. DePriest</div>
+                <!-- Featured -->
+                <div class="news-card news-featured reveal">
+                    <div class="news-featured-img">🚀</div>
+                    <div class="news-featured-body">
+                        <div class="news-featured-cat">Featured Release</div>
+                        <div class="news-card-date">June 2026</div>
+                        <div class="news-featured-title">Paladin Is Now Available — The Second Book In The First Legion Universe</div>
+                        <p class="news-featured-excerpt">The long-awaited second installment of the First Legion Universe is here. Paladin takes readers to 1944 and then hurls them centuries forward into a galactic war. Available now in all formats.</p>
+                        <a href="book-paladin.html" class="btn btn-primary" style="padding:12px 28px;">Read More <span class="btn-icon">→</span></a>
                     </div>
                 </div>
-
-                <!-- NEWS CARDS -->
+                <!-- Regular cards -->
+                <div class="news-card reveal">
+                    <div class="news-card-header">
+                        <div class="news-card-cat">Author Update</div>
+                        <div class="news-card-date">May 2026</div>
+                        <div class="news-card-title">David W. DePriest Announces Book Three Is In Development</div>
+                    </div>
+                    <p class="news-card-excerpt">In a message to Legion members, DePriest confirmed the third book in the series is actively being written. "The galaxy is bigger than even I imagined," he said.</p>
+                    <div class="news-card-footer"><span class="news-card-tag">Author News</span><a href="enlist.html" class="news-read-link">Stay Updated →</a></div>
+                </div>
                 <div class="news-card reveal delay-1">
-                    <div class="news-card-img"><div class="news-card-img-text">02</div></div>
-                    <div class="news-card-body">
-                        <span class="news-tag">Upcoming</span>
-                        <div class="news-title">WARLORD: THE NEXT CHAPTER</div>
-                        <p class="news-excerpt">The conflict expands. Book Two of the First Legion Universe is in development. Enlist today to receive exclusive early updates and behind-the-scenes content as the next chapter takes shape.</p>
-                        <div class="news-meta">Coming Soon &nbsp;·&nbsp; Future Release</div>
+                    <div class="news-card-header">
+                        <div class="news-card-cat">Events</div>
+                        <div class="news-card-date">April 2026</div>
+                        <div class="news-card-title">First Legion Featured At Regional Military Sci-Fi Convention</div>
                     </div>
+                    <p class="news-card-excerpt">David W. DePriest appeared at the Midlands Military Sci-Fi Convention to discuss the First Legion Universe, sign copies, and reveal new details about the series.</p>
+                    <div class="news-card-footer"><span class="news-card-tag">Events</span><a href="contact.html" class="news-read-link">Learn More →</a></div>
                 </div>
-
                 <div class="news-card reveal delay-2">
-                    <div class="news-card-img"><div class="news-card-img-text">FL</div></div>
-                    <div class="news-card-body">
-                        <span class="news-tag">Universe</span>
-                        <div class="news-title">THE FIRST LEGION UNIVERSE EXPANDS</div>
-                        <p class="news-excerpt">The universe of First Legion extends far beyond the first book. Future installments will explore new worlds, new characters, and new conflicts across the galaxy. The mission is only beginning.</p>
-                        <div class="news-meta">Ongoing &nbsp;·&nbsp; Universe Updates</div>
+                    <div class="news-card-header">
+                        <div class="news-card-cat">Reviews</div>
+                        <div class="news-card-date">March 2026</div>
+                        <div class="news-card-title">First Legion: Warlord Receives Standout Reader Reviews</div>
                     </div>
+                    <p class="news-card-excerpt">Readers continue to praise the depth of the First Legion Universe — citing the alien political structures, fleet battle sequences, and Admiral Godford's commanding presence as standout elements.</p>
+                    <div class="news-card-footer"><span class="news-card-tag">Reviews</span><a href="book-warlord.html" class="news-read-link">Read Book →</a></div>
                 </div>
-
                 <div class="news-card reveal delay-3">
-                    <div class="news-card-img"><div class="news-card-img-text">🚀</div></div>
-                    <div class="news-card-body">
-                        <span class="news-tag">Community</span>
-                        <div class="news-title">JOIN THE FIRST LEGION FLEET TODAY</div>
-                        <p class="news-excerpt">Thousands of readers are already exploring the First Legion Universe. Enlist today and become part of a growing community of military science-fiction fans following humanity's greatest adventure.</p>
-                        <div class="news-meta">Now Open &nbsp;·&nbsp; Community</div>
+                    <div class="news-card-header">
+                        <div class="news-card-cat">Lore Drop</div>
+                        <div class="news-card-date">February 2026</div>
+                        <div class="news-card-title">New Faction Lore: The Tellnite Dominion — A Deep Dive</div>
                     </div>
+                    <p class="news-card-excerpt">Exclusive lore available to Legion members — a 10-page deep dive into the history, culture, and motivations of the Tellnite Dominion. Join the Legion to access it.</p>
+                    <div class="news-card-footer"><span class="news-card-tag">Lore</span><a href="enlist.html" class="news-read-link">Unlock →</a></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- NEWSLETTER CTA -->
+    <!-- Newsletter CTA -->
     <section class="section enlist-section">
         <div class="container">
-            <div class="reveal">
-                <div class="section-eyebrow" style="justify-content:center;">Never Miss A Transmission</div>
-                <h2 class="section-title" style="text-align:center;">STAY <span>INFORMED</span></h2>
-                <p class="section-subtitle" style="margin:20px auto 0; text-align:center; max-width:600px;">Subscribe to receive the latest news, exclusive content, and announcements directly from the First Legion command center.</p>
-            </div>
-            <form class="enlist-form reveal delay-2" style="margin-top:50px;">
-                <input type="email" class="form-field" placeholder="Your Email Address" required />
-                <button type="submit" class="btn btn-primary">Subscribe <span class="btn-icon">→</span></button>
-            </form>
+            <div class="reveal"><div class="section-eyebrow" style="justify-content:center;">Stay Informed</div><h2 class="section-title" style="text-align:center;">NEVER MISS A <span>DISPATCH</span></h2><p class="section-subtitle" style="text-align:center;margin:20px auto 0;">Join the Legion Command Center for news, lore drops, and early access.</p></div>
+            <form class="enlist-form reveal delay-2"><input type="email" class="form-field" placeholder="Your Email Address" required /><button type="submit" class="btn btn-primary">ENLIST NOW <span class="btn-icon">→</span></button></form>
         </div>
     </section>
 
@@ -122,9 +132,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div><div class="footer-brand-title">FIRST <span>LEGION</span></div><p class="footer-brand-text">An epic military science-fiction universe by David W. DePriest.</p></div>
-                <div><div class="footer-heading">Navigate</div><ul class="footer-links"><li><a href="../index.html" class="footer-link">Home</a></li><li><a href="book.html" class="footer-link">The Book</a></li><li><a href="universe.html" class="footer-link">Universe</a></li><li><a href="fleet.html" class="footer-link">Fleet</a></li></ul></div>
-                <div><div class="footer-heading">Explore</div><ul class="footer-links"><li><a href="characters.html" class="footer-link">Characters</a></li><li><a href="about.html" class="footer-link">About</a></li><li><a href="news.html" class="footer-link">News</a></li><li><a href="enlist.html" class="footer-link">Enlist</a></li></ul></div>
-                <div><div class="footer-heading">Connect</div><ul class="footer-links"><li><a href="#" class="footer-link">Newsletter</a></li><li><a href="#" class="footer-link">Contact</a></li></ul></div>
+                <div><div class="footer-heading">Books</div><ul class="footer-links"><li><a href="book-warlord.html" class="footer-link">First Legion: Warlord</a></li><li><a href="book-paladin.html" class="footer-link">Paladin</a></li></ul></div>
+                <div><div class="footer-heading">Explore</div><ul class="footer-links"><li><a href="universe.html" class="footer-link">Universe</a></li><li><a href="characters.html" class="footer-link">Characters</a></li><li><a href="fleet.html" class="footer-link">Fleet Database</a></li></ul></div>
+                <div><div class="footer-heading">Connect</div><ul class="footer-links"><li><a href="enlist.html" class="footer-link">Newsletter</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
             </div>
             <div class="footer-bottom"><p class="footer-copy">&copy; 2026 <span>David W. DePriest</span>. All Rights Reserved.</p></div>
         </div>

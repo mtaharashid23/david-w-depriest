@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Fleet Command – The ships of First Legion." />
-    <title>Fleet Command | First Legion</title>
+    <title>Fleet Database | First Legion Universe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
@@ -14,104 +13,105 @@
         <div class="nav-container">
             <a href="../index.html" class="nav-logo">FIRST <span>LEGION</span></a>
             <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li><li><a href="book.html" class="nav-link">The Book</a></li><li><a href="universe.html" class="nav-link">Universe</a></li><li><a href="fleet.html" class="nav-link">Fleet</a></li><li><a href="characters.html" class="nav-link">Characters</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown"><a href="book.html" class="nav-link">Books <span class="nav-arrow">▾</span></a><ul class="dropdown-menu"><li><a href="book-warlord.html" class="dropdown-link">First Legion: Warlord</a></li><li><a href="book-paladin.html" class="dropdown-link">Paladin</a></li></ul></li>
+                <li><a href="universe.html" class="nav-link">Universe</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="characters.html" class="nav-link">Characters</a></li>
+                <li><a href="fleet.html" class="nav-link" style="color:var(--color-gold)">Fleet Database</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="media.html" class="nav-link">Media</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-            <a href="enlist.html" class="nav-cta">Enlist Now</a>
-            <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+            <a href="enlist.html" class="nav-cta">Join The Legion</a>
+            <button class="hamburger"><span></span><span></span><span></span></button>
         </div>
     </nav>
-    <div class="mobile-nav"><a href="../index.html" class="nav-link">Home</a><a href="book.html" class="nav-link">The Book</a><a href="universe.html" class="nav-link">Universe</a><a href="fleet.html" class="nav-link">Fleet</a><a href="characters.html" class="nav-link">Characters</a><a href="about.html" class="nav-link">About</a><a href="news.html" class="nav-link">News</a><a href="enlist.html" class="nav-link" style="color:var(--color-blue)">Enlist Now</a></div>
+    <div class="mobile-nav">
+        <a href="../index.html" class="nav-link">Home</a><a href="book.html" class="nav-link">Books</a><a href="universe.html" class="nav-link">Universe</a><a href="timeline.html" class="nav-link">Timeline</a><a href="characters.html" class="nav-link">Characters</a><a href="fleet.html" class="nav-link">Fleet Database</a><a href="news.html" class="nav-link">News</a><a href="media.html" class="nav-link">Media</a><a href="shop.html" class="nav-link">Shop</a><a href="contact.html" class="nav-link">Contact</a><a href="enlist.html" class="nav-link" style="color:var(--color-gold)">Join The Legion</a>
+    </div>
     <div class="nav-overlay"></div>
 
-    <div class="page-hero">
-        <div class="container">
-            <div class="page-breadcrumb"><a href="../index.html">Home</a> / Fleet Command</div>
-            <h1 class="page-hero-title">FLEET <span>COMMAND</span></h1>
-        </div>
-    </div>
-
-    <!-- FLEET INTRO -->
-    <section class="section fleet-section">
-        <div class="container">
-            <div class="fleet-header reveal">
-                <div class="section-eyebrow" style="justify-content:center;">The Manifest</div>
-                <h2 class="section-title">THE <span>FLEET</span></h2>
-                <p style="font-size:17px; color:var(--color-white-dim); line-height:1.8; max-width:700px; margin:24px auto 0; text-align:center;">The First Legion Fleet represents the largest military undertaking in human history. Designed to protect Earth and its allies, these vessels combine advanced technology, overwhelming firepower, and highly trained personnel.</p>
-            </div>
-
-            <div class="fleet-stats-bar reveal">
-                <div class="fleet-stat"><span class="fleet-stat-num" data-count="23">23</span><span class="fleet-stat-label">Warships</span></div>
-                <div class="fleet-stat"><span class="fleet-stat-num">~1M</span><span class="fleet-stat-label">Personnel</span></div>
-                <div class="fleet-stat"><span class="fleet-stat-num">1</span><span class="fleet-stat-label">Mission</span></div>
-            </div>
-
-            <div class="fleet-grid">
-                <div class="ship-card flagship-card">
-                    <div class="flagship-icon-wrap"><div class="flagship-icon">🚀</div></div>
-                    <div>
-                        <div class="ship-designation">HSS-001 · FLAGSHIP · COMMAND CARRIER</div>
-                        <h3 class="ship-name">OLYMPIA</h3>
-                        <div class="ship-class">Flagship of First Legion — Admiral Godford's Command</div>
-                        <p class="ship-desc">The Olympia serves as the command center for fleet operations and the home of Admiral Stephen Godford. A symbol of humanity's determination, the Olympia leads the fleet into every major engagement. Its advanced command and control systems allow coordinated operations across the entire fleet, while its formidable armaments ensure it can lead from the front when the battle demands it.</p>
-                        <div class="ship-divider"></div>
-                        <span class="ship-role-badge">Fleet Command · Vanguard Operations · Strategic Command</span>
-                    </div>
-                </div>
-                <div class="ship-card">
-                    <div class="ship-designation">HSS-002 · HEAVY CRUISER</div>
-                    <h3 class="ship-name">TIGRESS</h3>
-                    <div class="ship-class">Heavy Cruiser — Multi-Role Warship</div>
-                    <p class="ship-desc">A versatile warship designed for both fleet combat and independent operations. Known for its durability, firepower, and tactical flexibility, the Tigress is among the most capable ships in the Legion's arsenal.</p>
-                    <div class="ship-divider"></div>
-                    <span class="ship-role-badge">Fleet Combat · Independent Ops · Escort</span>
-                </div>
-                <div class="ship-card">
-                    <div class="ship-designation">HSS-003 · HEAVY CRUISER</div>
-                    <h3 class="ship-name">FANG</h3>
-                    <div class="ship-class">Heavy Cruiser — Front-Line Assault</div>
-                    <p class="ship-desc">Built for front-line combat, the Fang serves as one of First Legion's most formidable warships. Its aggressive design and powerful weapons systems make it the spearhead of any major assault.</p>
-                    <div class="ship-divider"></div>
-                    <span class="ship-role-badge">Assault · Front-Line Combat · Shock Force</span>
-                </div>
-                <div class="ship-card">
-                    <div class="ship-designation">HSS-004 · STRIKE CARRIER</div>
-                    <h3 class="ship-name">VALHALLA</h3>
-                    <div class="ship-class">Strike Carrier — Fighter Deployment</div>
-                    <p class="ship-desc">The Valhalla carries thousands of fighters and support craft into battle. Its presence often determines the outcome of major engagements, projecting power across vast areas of space.</p>
-                    <div class="ship-divider"></div>
-                    <span class="ship-role-badge">Air Wing Deployment · Area Denial · Battle Group Anchor</span>
-                </div>
-                <div class="ship-card">
-                    <div class="ship-designation">HSS-005 · FLEET CARRIER</div>
-                    <h3 class="ship-name">MIDAS</h3>
-                    <div class="ship-class">Fleet Carrier — Power Projection</div>
-                    <p class="ship-desc">Designed to project power across vast distances, the Midas serves as a critical component of First Legion's operational strategy, enabling sustained operations far from support bases.</p>
-                    <div class="ship-divider"></div>
-                    <span class="ship-role-badge">Power Projection · Sustained Operations · Strategic Reserve</span>
-                </div>
-                <div class="ship-card">
-                    <div class="ship-designation">HSS-006 · PERSONNEL CARRIER</div>
-                    <h3 class="ship-name">TITAN</h3>
-                    <div class="ship-class">Personnel Carrier — Troop Transport</div>
-                    <p class="ship-desc">The Titan transports the soldiers, specialists, and support personnel who form the backbone of the Legion. Without the Titan and vessels like it, no ground campaign would be possible.</p>
-                    <div class="ship-divider"></div>
-                    <span class="ship-role-badge">Troop Deployment · Logistics · Ground Force Support</span>
-                </div>
-            </div>
+    <section class="page-hero">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="hero-gradient"></div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="page-breadcrumb"><a href="../index.html">Home</a> <span>›</span> Fleet Database</div>
+            <h1 class="page-hero-title">FLEET <span>DATABASE</span></h1>
         </div>
     </section>
 
-    <!-- TACTICAL DOCTRINE -->
-    <section class="section" style="background:linear-gradient(to bottom,var(--color-midnight),var(--color-black));">
+    <section class="section fleet-section">
         <div class="container">
-            <div class="reveal" style="margin-bottom:60px;">
-                <div class="section-eyebrow">Strategy</div>
-                <h2 class="section-title">TACTICAL <span>DOCTRINE</span></h2>
+            <div class="fleet-header reveal">
+                <div class="section-eyebrow" style="justify-content:center;">Ship Registry</div>
+                <h2 class="section-title" style="text-align:center;">HUMANITY'S <span>WARSHIPS</span></h2>
+                <p class="section-subtitle" style="text-align:center;margin:16px auto 0;max-width:560px;">The vessels that carry humanity's fate across the stars. Each ship is a community, a weapon, and a symbol.</p>
             </div>
-            <div class="universe-grid">
-                <div class="universe-card reveal delay-1"><div class="universe-card-num">I</div><h3 class="universe-card-title">Superior Firepower</h3><p class="universe-card-text">Overwhelming force concentration at decisive points. The Legion does not fight fair — it fights to win.</p></div>
-                <div class="universe-card reveal delay-2"><div class="universe-card-num">II</div><h3 class="universe-card-title">Flexible Response</h3><p class="universe-card-text">Rapid adaptation to changing battlefield conditions. Every ship in the fleet is capable of independent operations when required.</p></div>
-                <div class="universe-card reveal delay-3"><div class="universe-card-num">III</div><h3 class="universe-card-title">Combined Arms</h3><p class="universe-card-text">Seamless coordination between carriers, cruisers, and ground forces ensures maximum combat effectiveness across all domains.</p></div>
+            <div class="fleet-stats-bar reveal delay-2">
+                <div class="fleet-stat"><span class="fleet-stat-num" data-count="47" data-suffix="">0</span><span class="fleet-stat-label">Active Vessels</span></div>
+                <div class="fleet-stat"><span class="fleet-stat-num" data-count="3">0</span><span class="fleet-stat-label">Battle Groups</span></div>
+                <div class="fleet-stat"><span class="fleet-stat-num" data-count="12000" data-suffix="+">0</span><span class="fleet-stat-label">Personnel</span></div>
+                <div class="fleet-stat"><span class="fleet-stat-num" data-count="6">0</span><span class="fleet-stat-label">Ship Classes</span></div>
+            </div>
+            <div class="fleet-grid">
+                <!-- Flagship -->
+                <div class="ship-card flagship-card">
+                    <div class="flagship-icon-wrap"><div class="flagship-icon">🛸</div></div>
+                    <div>
+                        <div class="ship-designation">Flagship — FL-001</div>
+                        <div class="ship-name">FSS Godford's Wrath</div>
+                        <div class="ship-class">Titan-Class Dreadnought</div>
+                        <div class="ship-desc">The largest and most heavily armed vessel in the First Legion fleet. Admiral Godford's command ship — a floating fortress capable of engaging Gargan battle groups alone. Her hull bears the scars of a dozen engagements and the pride of a thousand victories.</div>
+                        <div class="ship-role-badge">Fleet Command &amp; Fire Support</div>
+                    </div>
+                </div>
+                <!-- Destroyer -->
+                <div class="ship-card">
+                    <div class="ship-designation">Destroyer — FL-012</div>
+                    <div class="ship-name">FSS Relentless</div>
+                    <div class="ship-class">Vanguard-Class Destroyer</div>
+                    <div class="ship-desc">Fast, lethal, and expendable. The Relentless is the tip of the Legion's spear — designed to punch through enemy screens before heavier vessels arrive.</div>
+                    <div class="ship-divider"></div>
+                    <div class="ship-role-badge">Scout &amp; Assault</div>
+                </div>
+                <!-- Carrier -->
+                <div class="ship-card">
+                    <div class="ship-designation">Carrier — FL-005</div>
+                    <div class="ship-name">FSS Iron Horizon</div>
+                    <div class="ship-class">Colossus-Class Carrier</div>
+                    <div class="ship-desc">Carries three full wings of fighters and a complete Marine contingent. The Iron Horizon is a mobile staging ground — where battles are planned, and soldiers are born.</div>
+                    <div class="ship-divider"></div>
+                    <div class="ship-role-badge">Force Projection</div>
+                </div>
+                <!-- Stealth -->
+                <div class="ship-card">
+                    <div class="ship-designation">Stealth — FL-027</div>
+                    <div class="ship-name">FSS Shadow Protocol</div>
+                    <div class="ship-class">Specter-Class Stealth Frigate</div>
+                    <div class="ship-desc">Barely visible on even Gargan sensors, the Shadow Protocol excels at long-range reconnaissance, infiltration, and the kind of work that never appears in official records.</div>
+                    <div class="ship-divider"></div>
+                    <div class="ship-role-badge">Reconnaissance &amp; SIGINT</div>
+                </div>
+                <!-- Medical -->
+                <div class="ship-card">
+                    <div class="ship-designation">Hospital Ship — FL-MED-3</div>
+                    <div class="ship-name">FSS Mercy's Edge</div>
+                    <div class="ship-class">Haven-Class Medical Vessel</div>
+                    <div class="ship-desc">Protected under interstellar convention, Mercy's Edge follows the fleet into every battle and pulls the broken pieces back together. Her crew saves more lives per day than any warship.</div>
+                    <div class="ship-divider"></div>
+                    <div class="ship-role-badge">Medical &amp; Evacuation</div>
+                </div>
+                <!-- Historical -->
+                <div class="ship-card" style="border-color:rgba(58,168,255,0.35);">
+                    <div class="ship-designation" style="color:var(--color-blue);">Historical — 1944 U.S. Navy</div>
+                    <div class="ship-name">USS Paladin</div>
+                    <div class="ship-class">Fletcher-Class Destroyer</div>
+                    <div class="ship-desc">Launched in 1943. Vanished in 1944. Reappeared centuries later in the heart of an intergalactic war. The Paladin is a relic, a mystery, and the most unlikely warship in Legion history.</div>
+                    <div class="ship-divider" style="background:rgba(58,168,255,0.2);"></div>
+                    <div class="ship-role-badge" style="color:var(--color-blue);border-color:rgba(58,168,255,0.3);">Time-Displaced Destroyer</div>
+                </div>
             </div>
         </div>
     </section>
@@ -120,9 +120,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div><div class="footer-brand-title">FIRST <span>LEGION</span></div><p class="footer-brand-text">An epic military science-fiction universe by David W. DePriest.</p></div>
-                <div><div class="footer-heading">Navigate</div><ul class="footer-links"><li><a href="../index.html" class="footer-link">Home</a></li><li><a href="book.html" class="footer-link">The Book</a></li><li><a href="universe.html" class="footer-link">Universe</a></li><li><a href="fleet.html" class="footer-link">Fleet</a></li></ul></div>
-                <div><div class="footer-heading">Explore</div><ul class="footer-links"><li><a href="characters.html" class="footer-link">Characters</a></li><li><a href="about.html" class="footer-link">About</a></li><li><a href="news.html" class="footer-link">News</a></li><li><a href="enlist.html" class="footer-link">Enlist</a></li></ul></div>
-                <div><div class="footer-heading">Connect</div><ul class="footer-links"><li><a href="#" class="footer-link">Newsletter</a></li><li><a href="#" class="footer-link">Contact</a></li></ul></div>
+                <div><div class="footer-heading">Books</div><ul class="footer-links"><li><a href="book-warlord.html" class="footer-link">First Legion: Warlord</a></li><li><a href="book-paladin.html" class="footer-link">Paladin</a></li></ul></div>
+                <div><div class="footer-heading">Explore</div><ul class="footer-links"><li><a href="universe.html" class="footer-link">Universe</a></li><li><a href="timeline.html" class="footer-link">Timeline</a></li><li><a href="characters.html" class="footer-link">Characters</a></li></ul></div>
+                <div><div class="footer-heading">Connect</div><ul class="footer-links"><li><a href="enlist.html" class="footer-link">Newsletter</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
             </div>
             <div class="footer-bottom"><p class="footer-copy">&copy; 2026 <span>David W. DePriest</span>. All Rights Reserved.</p></div>
         </div>

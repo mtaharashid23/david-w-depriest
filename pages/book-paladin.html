@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paladin | David W. DePriest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">FIRST <span>LEGION</span></a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown"><a href="book.html" class="nav-link" style="color:var(--color-gold)">Books <span class="nav-arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="book-warlord.html" class="dropdown-link">First Legion: Warlord</a></li>
+                        <li><a href="book-paladin.html" class="dropdown-link">Paladin</a></li>
+                    </ul>
+                </li>
+                <li><a href="universe.html" class="nav-link">Universe</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="characters.html" class="nav-link">Characters</a></li>
+                <li><a href="fleet.html" class="nav-link">Fleet Database</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="media.html" class="nav-link">Media</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="enlist.html" class="nav-cta">Join The Legion</a>
+            <button class="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-nav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="book.html" class="nav-link">Books</a>
+        <a href="universe.html" class="nav-link">Universe</a>
+        <a href="timeline.html" class="nav-link">Timeline</a>
+        <a href="characters.html" class="nav-link">Characters</a>
+        <a href="fleet.html" class="nav-link">Fleet Database</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="media.html" class="nav-link">Media</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="enlist.html" class="nav-link" style="color:var(--color-gold)">Join The Legion</a>
+    </div>
+    <div class="nav-overlay"></div>
+
+    <section class="page-hero">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="hero-gradient" style="background: radial-gradient(ellipse at 30% 50%, rgba(10,60,120,0.35) 0%, transparent 60%), linear-gradient(to bottom, rgba(5,7,13,0.3) 0%, rgba(5,7,13,0.85) 100%);"></div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="page-breadcrumb"><a href="../index.html">Home</a> <span>›</span> <a href="book.html">Books</a> <span>›</span> Paladin</div>
+            <h1 class="page-hero-title"><span>PALADIN</span></h1>
+        </div>
+    </section>
+
+    <section class="section book-section">
+        <div class="container">
+            <div class="book-grid">
+                <div class="book-cover-wrap reveal-left">
+                    <div class="book-cover-frame" style="display:flex;align-items:center;justify-content:center;">
+                        <div class="paladin-placeholder" style="width:300px;height:450px;">
+                            <div class="paladin-icon">⚓</div>
+                            <div class="paladin-label">PALADIN</div>
+                        </div>
+                        <div class="book-badge" style="background:var(--color-blue);">BOOK<br/>TWO</div>
+                    </div>
+                </div>
+                <div class="book-content reveal-right">
+                    <div class="book-author">David W. DePriest</div>
+                    <h2 class="book-title">Paladin</h2>
+                    <p class="book-desc">
+                        In 1944, the USS Paladin — a Navy destroyer — disappears during a routine patrol in the Pacific. No wreckage. No survivors. No explanation. The navy classifies her as lost at sea.
+                    </p>
+                    <p class="book-desc" style="margin-top:16px;">
+                        Centuries later, in the middle of the First Legion's greatest battle, a 20th century warship materializes from nowhere — weapons hot, crew alive, and carrying intelligence that could change the war. Four ordinary sailors from the past must navigate a universe they never imagined, facing alien civilizations, impossible technology, and a conflict that spans galaxies — all while trying to find a way home.
+                    </p>
+                    <div class="book-features">
+                        <div class="book-feature"><span class="book-feature-icon">⏳</span><div class="book-feature-text"><h4>Time Displacement</h4><p>A WWII crew thrust centuries forward</p></div></div>
+                        <div class="book-feature"><span class="book-feature-icon">🌌</span><div class="book-feature-text"><h4>Alien Contact</h4><p>First encounters with multiple species</p></div></div>
+                        <div class="book-feature"><span class="book-feature-icon">⚔</span><div class="book-feature-text"><h4>Survival</h4><p>Against impossible odds in deep space</p></div></div>
+                        <div class="book-feature"><span class="book-feature-icon">🧭</span><div class="book-feature-text"><h4>Exploration</h4><p>Uncharted regions of the galaxy</p></div></div>
+                    </div>
+                    <div class="book-buttons">
+                        <a href="#" class="btn btn-primary">Buy Now <span class="btn-icon">→</span></a>
+                        <a href="book-warlord.html" class="btn btn-outline">Read Warlord First</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREW SECTION -->
+    <section class="section" style="background: var(--color-navy);">
+        <div class="container">
+            <div class="reveal" style="text-align:center;margin-bottom:60px;">
+                <div class="section-eyebrow" style="justify-content:center;">The Crew</div>
+                <h2 class="section-title" style="text-align:center;">SAILORS OUT <span>OF TIME</span></h2>
+            </div>
+            <div class="char-grid" style="grid-template-columns:repeat(4,1fr);">
+                <div class="char-card reveal">
+                    <div class="char-portrait">C</div>
+                    <div class="char-rank">Commander</div>
+                    <div class="char-name">Captain Harlan Cole</div>
+                    <div class="char-affiliation">USS Paladin</div>
+                    <div class="char-bio">A decorated WWII captain thrust into a war beyond imagination. Pragmatic, resolute, and fiercely protective of his crew.</div>
+                </div>
+                <div class="char-card reveal delay-1">
+                    <div class="char-portrait">R</div>
+                    <div class="char-rank">Navigator</div>
+                    <div class="char-name">Lt. Reeves</div>
+                    <div class="char-affiliation">USS Paladin</div>
+                    <div class="char-bio">The Paladin's chief navigator — forced to chart a course through an entirely alien star system using only 20th-century instruments.</div>
+                </div>
+                <div class="char-card reveal delay-2">
+                    <div class="char-portrait">M</div>
+                    <div class="char-rank">Engineer</div>
+                    <div class="char-name">Chief Mallory</div>
+                    <div class="char-affiliation">USS Paladin</div>
+                    <div class="char-bio">Keeps the Paladin running against all odds. His ingenuity in adapting 1944 tech to alien environments becomes the crew's greatest asset.</div>
+                </div>
+                <div class="char-card reveal delay-3">
+                    <div class="char-portrait">K</div>
+                    <div class="char-rank">Medic</div>
+                    <div class="char-name">Doc Kessler</div>
+                    <div class="char-affiliation">USS Paladin</div>
+                    <div class="char-bio">The ship's doctor navigates both human trauma and alien biology — becoming the Paladin's most unexpected diplomat.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div><div class="footer-brand-title">FIRST <span>LEGION</span></div><p class="footer-brand-text">An epic military science-fiction universe by David W. DePriest.</p></div>
+                <div><div class="footer-heading">Books</div><ul class="footer-links"><li><a href="book-warlord.html" class="footer-link">First Legion: Warlord</a></li><li><a href="book-paladin.html" class="footer-link">Paladin</a></li></ul></div>
+                <div><div class="footer-heading">Explore</div><ul class="footer-links"><li><a href="universe.html" class="footer-link">Universe</a></li><li><a href="characters.html" class="footer-link">Characters</a></li><li><a href="fleet.html" class="footer-link">Fleet Database</a></li></ul></div>
+                <div><div class="footer-heading">Connect</div><ul class="footer-links"><li><a href="enlist.html" class="footer-link">Newsletter</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p class="footer-copy">&copy; 2026 <span>David W. DePriest</span>. All Rights Reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+    <script>gsap.registerPlugin(ScrollTrigger);</script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

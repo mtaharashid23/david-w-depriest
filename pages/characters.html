@@ -2,28 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Characters of First Legion – The people who shaped history." />
-    <title>Characters | First Legion</title>
+    <title>Characters | First Legion Universe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css" />
     <style>
-        .char-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 70px; }
-        .char-card { background: rgba(10,16,36,0.8); border: var(--border-glow); padding: 44px 36px; position: relative; overflow: hidden; transition: all var(--transition-med); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px)); }
-        .char-card::after { content:''; position:absolute; bottom:0; left:0; width:0%; height:2px; background:linear-gradient(to right, var(--color-blue), transparent); transition: width var(--transition-slow); }
-        .char-card:hover { border-color: rgba(0,174,239,0.5); background: rgba(0,174,239,0.04); transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(0,174,239,0.1); }
-        .char-card:hover::after { width: 100%; }
-        .char-avatar { width: 80px; height: 80px; border: var(--border-glow-strong); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; background: rgba(0,174,239,0.06); }
-        .char-initials { font-family: var(--font-heading); font-size: 24px; font-weight: 900; color: var(--color-blue); }
-        .char-rank { font-family: var(--font-subheading); font-size: 10px; font-weight: 700; letter-spacing: 0.5em; text-transform: uppercase; color: var(--color-blue); margin-bottom: 10px; }
-        .char-name { font-family: var(--font-heading); font-size: 22px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-white); margin-bottom: 8px; }
-        .char-role { font-family: var(--font-subheading); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-steel); margin-bottom: 20px; }
-        .char-desc { font-size: 14px; color: var(--color-white-dimmer); line-height: 1.75; }
-        .char-card-featured { grid-column: 1 / -1; display: grid; grid-template-columns: auto 1fr; gap: 50px; align-items: center; border-color: rgba(0,174,239,0.4); background: rgba(0,40,80,0.15); }
-        .char-avatar-lg { width: 140px; height: 140px; border: var(--border-glow-strong); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle, rgba(0,174,239,0.12), rgba(0,174,239,0.03)); box-shadow: 0 0 40px rgba(0,174,239,0.2); flex-shrink: 0; }
-        .char-initials-lg { font-family: var(--font-heading); font-size: 46px; font-weight: 900; color: var(--color-blue); text-shadow: 0 0 30px rgba(0,174,239,0.5); }
-        @media (max-width: 991px) { .char-grid { grid-template-columns: 1fr 1fr; } .char-card-featured { grid-column: auto; grid-template-columns: 1fr; gap: 30px; } }
-        @media (max-width: 600px) { .char-grid { grid-template-columns: 1fr; } }
+        .char-search-wrap { max-width:400px; margin:40px auto 60px; }
+        .char-search-input { width:100%; background:rgba(10,16,34,0.8); border:var(--border-glow); padding:14px 20px; font-family:var(--font-body); font-size:14px; color:var(--color-silver); outline:none; transition:border-color 0.2s; clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%); }
+        .char-search-input:focus { border-color:var(--color-gold); }
+        .char-search-input::placeholder { color:var(--color-steel); letter-spacing:0.05em; }
     </style>
 </head>
 <body>
@@ -32,90 +19,147 @@
         <div class="nav-container">
             <a href="../index.html" class="nav-logo">FIRST <span>LEGION</span></a>
             <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li><li><a href="book.html" class="nav-link">The Book</a></li><li><a href="universe.html" class="nav-link">Universe</a></li><li><a href="fleet.html" class="nav-link">Fleet</a></li><li><a href="characters.html" class="nav-link">Characters</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown"><a href="book.html" class="nav-link">Books <span class="nav-arrow">▾</span></a><ul class="dropdown-menu"><li><a href="book-warlord.html" class="dropdown-link">First Legion: Warlord</a></li><li><a href="book-paladin.html" class="dropdown-link">Paladin</a></li></ul></li>
+                <li><a href="universe.html" class="nav-link">Universe</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="characters.html" class="nav-link" style="color:var(--color-gold)">Characters</a></li>
+                <li><a href="fleet.html" class="nav-link">Fleet Database</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="media.html" class="nav-link">Media</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-            <a href="enlist.html" class="nav-cta">Enlist Now</a>
-            <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+            <a href="enlist.html" class="nav-cta">Join The Legion</a>
+            <button class="hamburger"><span></span><span></span><span></span></button>
         </div>
     </nav>
-    <div class="mobile-nav"><a href="../index.html" class="nav-link">Home</a><a href="book.html" class="nav-link">The Book</a><a href="universe.html" class="nav-link">Universe</a><a href="fleet.html" class="nav-link">Fleet</a><a href="characters.html" class="nav-link">Characters</a><a href="about.html" class="nav-link">About</a><a href="news.html" class="nav-link">News</a><a href="enlist.html" class="nav-link" style="color:var(--color-blue)">Enlist Now</a></div>
+    <div class="mobile-nav">
+        <a href="../index.html" class="nav-link">Home</a><a href="book.html" class="nav-link">Books</a><a href="universe.html" class="nav-link">Universe</a><a href="timeline.html" class="nav-link">Timeline</a><a href="characters.html" class="nav-link">Characters</a><a href="fleet.html" class="nav-link">Fleet Database</a><a href="news.html" class="nav-link">News</a><a href="media.html" class="nav-link">Media</a><a href="shop.html" class="nav-link">Shop</a><a href="contact.html" class="nav-link">Contact</a><a href="enlist.html" class="nav-link" style="color:var(--color-gold)">Join The Legion</a>
+    </div>
     <div class="nav-overlay"></div>
 
-    <div class="page-hero">
-        <div class="container">
-            <div class="page-breadcrumb"><a href="../index.html">Home</a> / Characters</div>
-            <h1 class="page-hero-title">THE PEOPLE WHO<br/><span>SHAPED HISTORY</span></h1>
+    <section class="page-hero">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="hero-gradient"></div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="page-breadcrumb"><a href="../index.html">Home</a> <span>›</span> Characters</div>
+            <h1 class="page-hero-title">CHARACTER <span>DATABASE</span></h1>
         </div>
-    </div>
+    </section>
 
-    <section class="section">
+    <section class="section character-section">
         <div class="container">
-            <div class="reveal" style="max-width:700px;">
-                <div class="section-eyebrow">Personnel Dossiers</div>
-                <h2 class="section-title">CHARACTER <span>PROFILES</span></h2>
-                <p class="section-subtitle">Every great conflict is defined by the individuals who choose to stand against impossible odds.</p>
-            </div>
-
-            <div class="char-grid">
-                <!-- GODFORD FEATURED -->
-                <div class="char-card char-card-featured reveal">
-                    <div class="char-avatar-lg">
-                        <span class="char-initials-lg">SG</span>
-                    </div>
+            <div class="character-grid">
+                <div class="character-visual reveal-left">
                     <div>
-                        <div class="char-rank">Admiral · First Legion Command</div>
-                        <div class="char-name">STEPHEN GODFORD</div>
-                        <div class="char-role">Commander, First Legion — Humanity's Greatest Military Leader</div>
-                        <p class="char-desc">Once a civilian engineer, Stephen Godford becomes the leader of humanity's first interstellar military force. His strategic brilliance, courage, and commitment to protecting others transform him into one of the most influential figures in human history.</p>
-                        <p class="char-desc" style="margin-top:14px;">As commander of First Legion, Godford must navigate war, politics, alliances, and personal sacrifice while carrying the hopes of entire worlds. What began as an unlikely path from computer engineering to command led to decisions that would determine the survival of civilizations.</p>
-                        <div style="margin-top:24px; display:flex; gap:16px; flex-wrap:wrap;">
-                            <div class="stat-card" style="padding:14px 20px;"><span class="stat-value" style="font-size:20px;">ADM</span><span class="stat-label">Rank</span></div>
-                            <div class="stat-card" style="padding:14px 20px;"><span class="stat-value" style="font-size:20px;">Olympia</span><span class="stat-label">Flagship</span></div>
-                            <div class="stat-card" style="padding:14px 20px;"><span class="stat-value" style="font-size:20px;">~1M</span><span class="stat-label">Under Command</span></div>
+                        <div class="character-emblem">
+                            <div class="character-emblem-inner">FL</div>
+                        </div>
+                        <div class="character-stats">
+                            <div class="stat-card"><span class="stat-value" data-count="12" data-suffix="+">0</span><span class="stat-label">Characters</span></div>
+                            <div class="stat-card"><span class="stat-value" data-count="3" data-suffix="">0</span><span class="stat-label">Factions</span></div>
+                            <div class="stat-card"><span class="stat-value" data-count="2" data-suffix="">0</span><span class="stat-label">Books</span></div>
+                            <div class="stat-card"><span class="stat-value" data-count="5" data-suffix="+">0</span><span class="stat-label">Species</span></div>
                         </div>
                     </div>
                 </div>
-
-                <!-- JOHANSSON -->
-                <div class="char-card reveal delay-1">
-                    <div class="char-avatar"><span class="char-initials">JJ</span></div>
-                    <div class="char-rank">Captain · First Legion</div>
-                    <div class="char-name">JEFFERY JOHANSSON</div>
-                    <div class="char-role">Trusted Advisor & Senior Officer</div>
-                    <p class="char-desc">A trusted advisor and loyal officer, Johansson serves as one of Godford's closest allies. His professionalism, leadership, and unwavering support help guide First Legion through some of its greatest challenges. When command falters, Johansson steadies the line.</p>
-                </div>
-
-                <!-- MERRICK -->
-                <div class="char-card reveal delay-2">
-                    <div class="char-avatar"><span class="char-initials">MRK</span></div>
-                    <div class="char-rank">Officer · First Legion</div>
-                    <div class="char-name">MERRICK</div>
-                    <div class="char-role">First Legion Officer</div>
-                    <p class="char-desc">A key figure in the First Legion command structure, Merrick's role in the unfolding conflict proves critical to the fleet's survival. His background and loyalties are among the more complex threads woven through the First Legion saga.</p>
-                </div>
-
-                <!-- THE CREW -->
-                <div class="char-card reveal delay-3">
-                    <div class="char-avatar"><span class="char-initials" style="font-size:16px;">FL1</span></div>
-                    <div class="char-rank">Personnel · First Legion</div>
-                    <div class="char-name">THE MEN &amp; WOMEN OF FIRST LEGION</div>
-                    <div class="char-role">Pilots · Engineers · Soldiers · Scientists · Leaders</div>
-                    <p class="char-desc">Drawn from every corner of Earth, the personnel of First Legion represent the very best humanity has to offer. Together they form the first line of defense against the growing threats beyond Earth — ordinary people rising to meet extraordinary challenges.</p>
+                <div class="reveal-right">
+                    <div class="section-eyebrow">Legion Personnel</div>
+                    <h2 class="section-title">THE PEOPLE OF THE <span>GALAXY</span></h2>
+                    <p class="section-subtitle">From decorated admirals to time-displaced sailors, the characters of the First Legion Universe are forged in the heat of galactic conflict.</p>
+                    <div class="char-search-wrap">
+                        <input type="text" class="char-search-input" id="charSearch" placeholder="Search characters..." />
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ENLIST CTA -->
-    <section class="section enlist-section">
+    <!-- WARLORD CHARACTERS -->
+    <section class="section" style="background:var(--color-navy);padding-top:20px;">
         <div class="container">
-            <div class="reveal">
-                <div class="section-eyebrow" style="justify-content:center;">Join The Story</div>
-                <h2 class="section-title" style="text-align:center;">DISCOVER THEIR <span>STORIES</span></h2>
-                <p class="section-subtitle" style="margin:20px auto 0; text-align:center; max-width:600px;">Read First Legion and follow these characters through humanity's greatest adventure among the stars.</p>
+            <div class="reveal" style="margin-bottom:40px;">
+                <div class="section-eyebrow">First Legion: Warlord</div>
+                <h2 class="section-title" style="font-size:clamp(22px,3vw,40px);">WARLORD <span>ROSTER</span></h2>
             </div>
-            <div style="text-align:center; margin-top:50px;" class="reveal delay-2">
-                <a href="book.html" class="btn btn-primary">Get The Book <span class="btn-icon">→</span></a>
+            <div class="char-grid">
+                <div class="char-card">
+                    <div class="char-portrait">G</div>
+                    <div class="char-rank">Fleet Admiral</div>
+                    <div class="char-name">Admiral Godford</div>
+                    <div class="char-affiliation">First Legion — Fleet Command</div>
+                    <div class="char-bio">Commander of Earth's first interstellar fleet. A tactician with an iron will and a deeply human instinct for when to fight and when to negotiate.</div>
+                    <div class="char-appearances"><span class="char-app-tag">Warlord</span></div>
+                </div>
+                <div class="char-card">
+                    <div class="char-portrait">V</div>
+                    <div class="char-rank">Vice Admiral</div>
+                    <div class="char-name">Vice Admiral Vance</div>
+                    <div class="char-affiliation">First Legion — Second Fleet</div>
+                    <div class="char-bio">Godford's most trusted officer and a brilliant strategist in her own right. She often sees what Godford misses — and isn't afraid to say so.</div>
+                    <div class="char-appearances"><span class="char-app-tag">Warlord</span></div>
+                </div>
+                <div class="char-card">
+                    <div class="char-portrait">X</div>
+                    <div class="char-rank">Gargan Commander</div>
+                    <div class="char-name">Commander Xar'veth</div>
+                    <div class="char-affiliation">Gargan Empire</div>
+                    <div class="char-bio">The Gargan assigned to monitor humanity's fleet. Cold, calculating, and secretly fascinated by human unpredictability.</div>
+                    <div class="char-appearances"><span class="char-app-tag">Warlord</span></div>
+                </div>
+                <div class="char-card">
+                    <div class="char-portrait">T</div>
+                    <div class="char-rank">Tellnite Envoy</div>
+                    <div class="char-name">Envoy Tael-Ra</div>
+                    <div class="char-affiliation">Tellnite Dominion</div>
+                    <div class="char-bio">Diplomat, spy, and possibly ally. Tael-Ra's true motives are unknown even to those who think they know her best.</div>
+                    <div class="char-appearances"><span class="char-app-tag">Warlord</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PALADIN CHARACTERS -->
+    <section class="section" style="padding-top:40px;">
+        <div class="container">
+            <div class="reveal" style="margin-bottom:40px;">
+                <div class="section-eyebrow">Paladin</div>
+                <h2 class="section-title" style="font-size:clamp(22px,3vw,40px);">PALADIN <span>CREW</span></h2>
+            </div>
+            <div class="char-grid">
+                <div class="char-card">
+                    <div class="char-portrait">C</div>
+                    <div class="char-rank">Commander</div>
+                    <div class="char-name">Captain Harlan Cole</div>
+                    <div class="char-affiliation">USS Paladin</div>
+                    <div class="char-bio">A decorated WWII captain thrust into a war beyond imagination. Pragmatic, resolute, and fiercely protective of his crew.</div>
+                    <div class="char-appearances"><span class="char-app-tag">Paladin</span></div>
+                </div>
+                <div class="char-card">
+                    <div class="char-portrait">R</div>
+                    <div class="char-rank">Navigator</div>
+                    <div class="char-name">Lt. Reeves</div>
+                    <div class="char-affiliation">USS Paladin</div>
+                    <div class="char-bio">Forced to chart a course through alien star systems using only 20th-century instruments. His adaptability becomes the crew's compass.</div>
+                    <div class="char-appearances"><span class="char-app-tag">Paladin</span></div>
+                </div>
+                <div class="char-card">
+                    <div class="char-portrait">M</div>
+                    <div class="char-rank">Engineer</div>
+                    <div class="char-name">Chief Mallory</div>
+                    <div class="char-affiliation">USS Paladin</div>
+                    <div class="char-bio">Keeps the Paladin running against all odds. His ingenuity in adapting 1944 technology to alien environments becomes the crew's greatest asset.</div>
+                    <div class="char-appearances"><span class="char-app-tag">Paladin</span></div>
+                </div>
+                <div class="char-card">
+                    <div class="char-portrait">K</div>
+                    <div class="char-rank">Medical Officer</div>
+                    <div class="char-name">Doc Kessler</div>
+                    <div class="char-affiliation">USS Paladin</div>
+                    <div class="char-bio">Navigates both human trauma and alien biology — becoming the Paladin's most unexpected diplomat across species boundaries.</div>
+                    <div class="char-appearances"><span class="char-app-tag">Paladin</span></div>
+                </div>
             </div>
         </div>
     </section>
@@ -124,9 +168,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div><div class="footer-brand-title">FIRST <span>LEGION</span></div><p class="footer-brand-text">An epic military science-fiction universe by David W. DePriest.</p></div>
-                <div><div class="footer-heading">Navigate</div><ul class="footer-links"><li><a href="../index.html" class="footer-link">Home</a></li><li><a href="book.html" class="footer-link">The Book</a></li><li><a href="universe.html" class="footer-link">Universe</a></li><li><a href="fleet.html" class="footer-link">Fleet</a></li></ul></div>
-                <div><div class="footer-heading">Explore</div><ul class="footer-links"><li><a href="characters.html" class="footer-link">Characters</a></li><li><a href="about.html" class="footer-link">About</a></li><li><a href="news.html" class="footer-link">News</a></li><li><a href="enlist.html" class="footer-link">Enlist</a></li></ul></div>
-                <div><div class="footer-heading">Connect</div><ul class="footer-links"><li><a href="#" class="footer-link">Newsletter</a></li><li><a href="#" class="footer-link">Contact</a></li></ul></div>
+                <div><div class="footer-heading">Books</div><ul class="footer-links"><li><a href="book-warlord.html" class="footer-link">First Legion: Warlord</a></li><li><a href="book-paladin.html" class="footer-link">Paladin</a></li></ul></div>
+                <div><div class="footer-heading">Explore</div><ul class="footer-links"><li><a href="universe.html" class="footer-link">Universe</a></li><li><a href="timeline.html" class="footer-link">Timeline</a></li><li><a href="fleet.html" class="footer-link">Fleet Database</a></li></ul></div>
+                <div><div class="footer-heading">Connect</div><ul class="footer-links"><li><a href="enlist.html" class="footer-link">Newsletter</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
             </div>
             <div class="footer-bottom"><p class="footer-copy">&copy; 2026 <span>David W. DePriest</span>. All Rights Reserved.</p></div>
         </div>
