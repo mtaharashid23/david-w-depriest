@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | First Legion Universe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+    <div class="cursor-dot"></div><div class="cursor-ring"></div>
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">FIRST <span>LEGION</span></a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown"><a href="books.html" class="nav-link">Books <span class="nav-arrow">▾</span></a><ul class="dropdown-menu"><li><a href="book-warlord.html" class="dropdown-link">First Legion: Warlord</a></li><li><a href="book-paladin.html" class="dropdown-link">Paladin</a></li></ul></li>
+                <li><a href="universe.html" class="nav-link">Universe</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="characters.html" class="nav-link">Characters</a></li>
+                <li><a href="fleet.html" class="nav-link">Fleet Database</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="media.html" class="nav-link">Media</a></li>
+                <li><a href="shop.html" class="nav-link" style="color:var(--color-gold)">Shop</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="enlist.html" class="nav-cta">Join The Legion</a>
+            <button class="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-nav">
+        <a href="../index.html" class="nav-link">Home</a><a href="books.html" class="nav-link">Books</a><a href="universe.html" class="nav-link">Universe</a><a href="timeline.html" class="nav-link">Timeline</a><a href="characters.html" class="nav-link">Characters</a><a href="fleet.html" class="nav-link">Fleet Database</a><a href="news.html" class="nav-link">News</a><a href="media.html" class="nav-link">Media</a><a href="shop.html" class="nav-link">Shop</a><a href="contact.html" class="nav-link">Contact</a><a href="enlist.html" class="nav-link" style="color:var(--color-gold)">Join The Legion</a>
+    </div>
+    <div class="nav-overlay"></div>
+
+    <section class="page-hero">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="hero-gradient"></div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="page-breadcrumb"><a href="../index.html">Home</a> <span>›</span> Shop</div>
+            <h1 class="page-hero-title">LEGION <span>STORE</span></h1>
+        </div>
+    </section>
+
+    <!-- BOOKS FOR SALE -->
+    <section class="section" style="background:var(--color-space-black);">
+        <div class="container">
+            <div class="reveal" style="text-align:center;margin-bottom:60px;">
+                <div class="section-eyebrow" style="justify-content:center;">Books</div>
+                <h2 class="section-title" style="text-align:center;">GET THE <span>BOOKS</span></h2>
+            </div>
+            <div class="featured-books-grid">
+                <div class="featured-book-card reveal-left">
+                    <div class="featured-book-cover-wrap">
+                        <div class="featured-book-frame">
+                            <img src="../images/book-cover.png" alt="First Legion Warlord" class="featured-book-img" />
+                            <div class="featured-book-badge">BOOK<br/>ONE</div>
+                        </div>
+                    </div>
+                    <div class="featured-book-info">
+                        <div class="section-eyebrow" style="margin-bottom:8px;">Available Now</div>
+                        <h3 class="featured-book-title">First Legion:<br/>Warlord</h3>
+                        <p class="featured-book-desc">The first book in the First Legion Universe. Available in paperback, hardcover, and e-book formats.</p>
+                        <div class="featured-book-btns" style="margin-top:20px;">
+                            <a href="#" class="btn btn-primary">Buy Paperback</a>
+                            <a href="#" class="btn btn-outline">Buy E-Book</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-book-card reveal-right">
+                    <div class="featured-book-cover-wrap">
+                        <div class="featured-book-frame paladin-frame">
+                            <div class="paladin-placeholder"><div class="paladin-icon">⚓</div><div class="paladin-label">PALADIN</div></div>
+                            <div class="featured-book-badge paladin-badge">BOOK<br/>TWO</div>
+                        </div>
+                    </div>
+                    <div class="featured-book-info">
+                        <div class="section-eyebrow" style="margin-bottom:8px;">Available Now</div>
+                        <h3 class="featured-book-title">Paladin</h3>
+                        <p class="featured-book-desc">The second book in the First Legion Universe. A time-displaced crew in a galaxy at war. Available in all formats.</p>
+                        <div class="featured-book-btns" style="margin-top:20px;">
+                            <a href="#" class="btn btn-primary">Buy Paperback</a>
+                            <a href="#" class="btn btn-outline">Buy E-Book</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MERCHANDISE -->
+    <section class="section" style="background:var(--color-navy);">
+        <div class="container">
+            <div class="reveal" style="text-align:center;margin-bottom:60px;">
+                <div class="section-eyebrow" style="justify-content:center;">Merchandise</div>
+                <h2 class="section-title" style="text-align:center;">LEGION <span>GEAR</span></h2>
+                <p class="section-subtitle" style="text-align:center;margin:16px auto 0;max-width:500px;">Official First Legion merchandise. Coming soon — join the Legion to be notified when the store launches.</p>
+            </div>
+            <div class="shop-grid">
+                <div class="shop-card reveal">
+                    <div class="shop-card-img">👕</div>
+                    <div class="shop-card-body">
+                        <div class="shop-card-title">First Legion T-Shirt</div>
+                        <p class="shop-card-desc">Official First Legion logo tee in premium cotton. Available in multiple colorways — space black, steel gray, and navy.</p>
+                        <div class="shop-coming-badge">Coming Soon</div>
+                    </div>
+                </div>
+                <div class="shop-card reveal delay-1">
+                    <div class="shop-card-img">🧢</div>
+                    <div class="shop-card-body">
+                        <div class="shop-card-title">Fleet Command Cap</div>
+                        <p class="shop-card-desc">Structured cap with embroidered First Legion insignia. Worn by fans who know what it takes to command a fleet.</p>
+                        <div class="shop-coming-badge">Coming Soon</div>
+                    </div>
+                </div>
+                <div class="shop-card reveal delay-2">
+                    <div class="shop-card-img">🖼</div>
+                    <div class="shop-card-body">
+                        <div class="shop-card-title">Art Prints</div>
+                        <p class="shop-card-desc">High-quality art prints featuring key scenes, ships, and characters from the First Legion Universe. Numbered limited editions.</p>
+                        <div class="shop-coming-badge">Coming Soon</div>
+                    </div>
+                </div>
+                <div class="shop-card reveal delay-3">
+                    <div class="shop-card-img">🗺</div>
+                    <div class="shop-card-body">
+                        <div class="shop-card-title">Galaxy Map Poster</div>
+                        <p class="shop-card-desc">A full-color, large-format poster of the First Legion galaxy map — showing all factions, systems, and contested territories.</p>
+                        <div class="shop-coming-badge">Coming Soon</div>
+                    </div>
+                </div>
+                <div class="shop-card reveal delay-4">
+                    <div class="shop-card-img">📚</div>
+                    <div class="shop-card-body">
+                        <div class="shop-card-title">Signed Collector's Set</div>
+                        <p class="shop-card-desc">A signed, numbered set of both books in premium hardcover with exclusive cover art and author's note. Limited quantities.</p>
+                        <div class="shop-coming-badge">Coming Soon</div>
+                    </div>
+                </div>
+                <div class="shop-card reveal delay-5">
+                    <div class="shop-card-img">🎖</div>
+                    <div class="shop-card-body">
+                        <div class="shop-card-title">Legion Challenge Coin</div>
+                        <p class="shop-card-desc">A premium metal challenge coin bearing the First Legion insignia on one face and the Fleet Command seal on the reverse.</p>
+                        <div class="shop-coming-badge">Coming Soon</div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:60px;" class="reveal">
+                <a href="enlist.html" class="btn btn-primary">Get Notified When Store Launches <span class="btn-icon">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div><div class="footer-brand-title">FIRST <span>LEGION</span></div><p class="footer-brand-text">An epic military science-fiction universe by David W. DePriest.</p></div>
+                <div><div class="footer-heading">Books</div><ul class="footer-links"><li><a href="book-warlord.html" class="footer-link">First Legion: Warlord</a></li><li><a href="book-paladin.html" class="footer-link">Paladin</a></li></ul></div>
+                <div><div class="footer-heading">Explore</div><ul class="footer-links"><li><a href="universe.html" class="footer-link">Universe</a></li><li><a href="characters.html" class="footer-link">Characters</a></li><li><a href="fleet.html" class="footer-link">Fleet Database</a></li></ul></div>
+                <div><div class="footer-heading">Connect</div><ul class="footer-links"><li><a href="news.html" class="footer-link">News</a></li><li><a href="enlist.html" class="footer-link">Newsletter</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p class="footer-copy">&copy; 2026 <span>David W. DePriest</span>. All Rights Reserved.</p></div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+    <script>gsap.registerPlugin(ScrollTrigger);</script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

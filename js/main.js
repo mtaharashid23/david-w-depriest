@@ -341,12 +341,8 @@ function initHeroAnimations() {
     if (divider)   tl.to(divider,   { opacity: 1, x: 0, duration: 0.7 }, 0.8);
     if (subtitle)  tl.to(subtitle,  { opacity: 1, y: 0, duration: 0.9 }, 1.0);
     if (buttons)   tl.to(buttons,   { opacity: 1, y: 0, duration: 0.9 }, 1.2);
-    if (ship)      tl.to(ship,      { opacity: 1, duration: 1.3,  x: 0 }, 0.5);
-    if (scrollInd) tl.to(scrollInd, { opacity: 1, duration: 0.8 }, 1.6);
-
-    if (ship) {
-        gsap.to(ship, { y: '-18px', duration: 3.2, ease: 'sine.inOut', repeat: -1, yoyo: true });
-    }
+    if (ship)      tl.to(ship,      { opacity: 1, duration: 1.3}, 0.5);
+    if (scrollInd) tl.to(scrollInd, { opacity: 1, duration: 0.8 }, 1.6);    
 }
 
 // ============================================
